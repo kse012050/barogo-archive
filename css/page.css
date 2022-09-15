@@ -12,9 +12,6 @@
 .mainArea .leftArea > div img{width: 100%;}
 .mainArea section{width: 56.771%; padding: 0 2.6%; box-sizing: border-box;}
 .mainArea section h2{font-size: 30px; font-weight: 700; padding-top: 80px; border-top: 4px solid black; margin-bottom: 60px;}
-.mainArea section ul{display: flex; flex-wrap: wrap; justify-content: space-between;}
-.mainArea section ul li{width: 47.25%;}
-.mainArea section ul li img{width: 100%; margin-bottom: 30px;}
-.mainArea section ul li strong{display: block; font-size: 22px; line-height: 1.55; font-weight: 700; margin-bottom: 10px;}
-.mainArea section ul li p{font-size: 15px; line-height: 1.6; margin-bottom: 5px;}
-.mainArea section ul li time{font-size: 15px; line-height: 1.6; color: #666;}
+.mainArea section .listBox li{width: 47.75%;}
+
+
