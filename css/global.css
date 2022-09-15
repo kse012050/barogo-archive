@@ -1,0 +1,45 @@
+
+/* 컨텐츠 크기 */
+.CW{padding-left: 50px; padding-right: 50px;}
+
+/* 해더 */
+header{padding: 22px 0;}
+header div{display: flex; align-items: center;}
+header div h1{margin-right: 40px;}
+header div h1 a{width: 120px; height: 20px; background: url('../images/common/pc-logo.png') no-repeat center / cover; text-indent: -9999px;}
+header div nav ul{display: flex; align-items: center;}
+header div nav ul li:not(:last-child){margin-right: 25px;}
+header div nav ul li a{font-size: 18px; padding: 9px 15px; font-weight: 700; text-align: center; }
+header div nav ul li.active a{color: white; background-color: black; border-radius: 100px;}
+
+
+/* 푸터 */
+footer .topArea{background-color: black; padding: 50px 0;}
+footer .topArea div{display: flex; justify-content: space-between;}
+footer .topArea div .linkArea{display: flex; color: white;}
+footer .topArea div .linkArea > li:not(:last-of-type){margin-right: 130px;}
+footer .topArea div .linkArea > li b{display: block; font-size: 14px; font-weight: 700; margin-bottom: 15px;}
+footer .topArea div .linkArea > li ul li a{font-size: 12px; line-height: 2.17; font-weight: 500; display: flex;}
+footer .topArea div .SNSArea{display: flex; gap: 20px;}
+footer .topArea div .SNSArea li a{display: block; width: 20px; height: 20px; background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
+footer .topArea div .SNSArea li:nth-child(1) a{background-image: url('../images/common/facebook.png');}
+footer .topArea div .SNSArea li:nth-child(2) a{background-image: url('../images/common/youtube.png');}
+footer .topArea div .SNSArea li:nth-child(3) a{background-image: url('../images/common/blog.png');}
+footer .topArea div .SNSArea li:nth-child(4) a{background-image: url('../images/common/insta.png');}
+
+/* 바텀 공통 */
+footer .bottomArea{padding-top: 50px; padding-bottom: 50px;}
+footer .bottomArea p{font-size: 12px; color: #999;}
+footer .bottomArea{display: flex; justify-content: space-between; align-items: flex-end;}
+footer .bottomArea div:first-of-type h2{width: 130px; margin-bottom: 10px;}
+footer .bottomArea div:first-of-type h2 img{width: 100%;}
+footer .bottomArea div:first-of-type address{display: flex; margin-bottom: 5px;}
+footer .bottomArea div:first-of-type address p:not(:last-of-type){margin-right: 5px;}
+footer .bottomArea div:first-of-type > p{margin-bottom: 20px;}
+footer .bottomArea div:first-of-type ul{display: flex;}
+footer .bottomArea div:first-of-type ul li:not(:last-of-type){margin-right: 20px;}
+footer .bottomArea div:first-of-type ul li a{font-size: 14px; font-weight: 700;}
+footer .bottomArea div:nth-of-type(2){text-align: right;}
+footer .bottomArea div:nth-of-type(2) b{display: block; font-size: 12px; margin-bottom: 10px;}
+footer .bottomArea div:nth-of-type(2) a{font-size: 26px; font-weight: 700; line-height: 1.19; margin-bottom: 10px;}
+footer .bottomArea div:nth-of-type(2) p{line-height: 1.25;}
