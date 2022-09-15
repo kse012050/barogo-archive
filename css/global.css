@@ -3,7 +3,7 @@
 .CW{padding-left: 50px; padding-right: 50px;}
 
 /* 해더 */
-header{padding: 22px 0;}
+header{padding: 22px 0; position: sticky; top: 0; left: 0; width: 100%;}
 header div{display: flex; align-items: center;}
 header div h1{margin-right: 40px;}
 header div h1 a{width: 120px; height: 20px; background: url('../images/common/pc-logo.png') no-repeat center / cover; text-indent: -9999px;}
