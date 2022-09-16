@@ -1,7 +1,7 @@
 $(document).ready(function(){
     let listBox = $('.listBox');
     let listBoxWidth = $('.listBox').width();
-    let listCount = Math.ceil(listBoxWidth / 475);
+    let listCount = Math.ceil(listBoxWidth / 600);
     listCount > 4 && (listCount = 4);
     let list = $('.listBox').find('li');
     let listGap = 20;

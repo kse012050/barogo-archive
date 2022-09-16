@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{width: 100px; height: 100px; padding: 50px; background-color: lightblue;}
+        div{width: 100px; height: 100px; padding: 50px; background-color: lightblue; position: relative;}
+        div::after{content: ''; position: absolute; background: attr('data-test'); width: 100%; height: 100%;}
         div span{display: block; width: 50%; height: 50px; background-color: lightcoral;}
     </style>
 </head>
 <body>
-    <div>
-        <span></span>
+    <div data-test="red">
+        
     </div>
+    <img src="https://via.placeholder.com/150" alt="">
 </body>
 </html>
