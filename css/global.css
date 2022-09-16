@@ -8,14 +8,26 @@ mark{color: #fa5014;}
 .imgBox{background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
 
 /* 해더 */
-header{padding: 22px 0; background-color: white; position: sticky; top: 0; left: 0; width: 100%; z-index: 100; box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1);}
-header div{display: flex; align-items: center;}
-header div h1{margin-right: 40px;}
-header div h1 a{width: 120px; height: 20px; background: url('../images/common/pc-logo.png') no-repeat center / cover; text-indent: -9999px;}
-header div nav ul{display: flex; align-items: center;}
-header div nav ul li:not(:last-child){margin-right: 25px;}
-header div nav ul li a{font-size: 18px; padding: 9px 15px; font-weight: 700; text-align: center; }
-header div nav ul li.active a{color: white; background-color: black; border-radius: 100px;}
+header{padding: 22px 0; background-color: white; position: sticky; top: 0; left: 0; width: 100%; z-index: 100; transition: box-shadow 0.5s;}
+header.active{box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1);}
+header .CW{display: flex; align-items: center;}
+header .CW h1{margin-right: 40px;}
+header .CW h1 a{width: 120px; height: 20px; background: url('../images/common/pc-logo.png') no-repeat center / cover; text-indent: -9999px;}
+header .CW nav ul{display: flex; align-items: center;}
+header .CW nav ul li:not(:last-child){margin-right: 25px;}
+header .CW nav ul li a{font-size: 18px; padding: 9px 15px; font-weight: 700; text-align: center; }
+header .CW nav ul li.active a{color: white; background-color: black; border-radius: 100px;}
+header .CW :is(form ,.searchBox , .openBtn){margin-left: auto;}
+header .CW .searchBox{  display: none; position: relative; overflow: hidden;}
+header .CW .searchBox fieldset{display: flex; align-items: center; overflow: hidden;}
+header .CW :is(button , [type="submit"]){width: 24px; height: 24px; background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
+header .CW :is(.openBtn ,[type="submit"]){background-image: url('../images/common/search.png');}
+/* header .CW .searchBox .openBtn{position: absolute; right: 0; top: 0;} */
+header .CW .searchBox [type="submit"]{border: none; background-color: transparent; order: -1; margin-right: 15px;}
+header .CW .searchBox .closeBtn{background-image: url('../images/common/delete.png'); opacity: 0.3; transition: opacity 0.5s;}
+header .CW .searchBox .closeBtn.active{opacity: 1;}
+header .CW .searchBox fieldset input[type="search"]{ width: 240px; font-size: 20px; font-weight: 700; border: none; padding: 0; outline: none; margin-right: 15px;}
+header .CW .searchBox fieldset input[type="search"]::placeholder{font-size: 18px; color: rgba(0, 0, 0, 0.3);}
 
 
 /* 서브페이지 상단 */

@@ -1,13 +1,54 @@
 $(document).ready(function(){
-    listLayout();
+    setTimeout(function(){
+        listLayout();
+
+    },100)
     $(window).resize(function(){
         listLayout();
     })
 
+    $(window).scroll(function(){
+        $(window).scrollTop() > 0 ? $('header').addClass('active') : $('header').removeClass('active');
+    })
+
+
+
+    $('.openBtn').click(function(){
+        let fieldsetWidth = $('.searchBox').width();
+        console.log(fieldsetWidth);
+        $(this).hide();
+        $('.searchBox').css({
+            'display':'block',
+            'width' : '24px'
+        });
+        $('.searchBox').animate({width:fieldsetWidth});
+    })
+    $('input[type="search"]').on('input',function(){
+        if($('input[type="search"]').val() != ""){
+            $('.closeBtn').addClass('active');
+        }else{
+            $('.closeBtn').removeClass('active');
+        }
+    })
+
+    $('.closeBtn').click(function(e){
+        e.preventDefault();
+        if(!$(this).hasClass('active')){
+            $('.searchBox').animate({width:24},function(){
+                $('.openBtn').show();
+                $('.searchBox').removeAttr('style');
+            });
+        }else{
+            $('input[type="search"]').val('');
+            $('.closeBtn').removeClass('active');
+        }
+    })
+
+
     function listLayout(){
         let listBox = $('.listBox');
         let listBoxWidth = $('.listBox').width();
-        let listCount = Math.ceil(listBoxWidth / 600);
+        let listCount = Math.ceil(listBoxWidth / 500);
         listCount > 4 && (listCount = 4);
         let list = $('.listBox').find('li');
         let listGap = 20;
