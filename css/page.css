@@ -12,7 +12,10 @@
 .mainArea .leftArea > div img{width: 100%;}
 .mainArea section{width: 56.771%; padding: 0 2.6%; box-sizing: border-box;}
 .mainArea section h2{font-size: 30px; font-weight: 700; padding-top: 80px; border-top: 4px solid black; margin-bottom: 60px;}
-.mainArea section .listBox li{width: 47.75%;}
+.mainArea section div{padding-bottom: 260px; position: relative;}
+.mainArea section div .readMore{position: absolute; bottom: 140px; left: 0; height: 42px; font-size: 14px; font-weight: 500; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; border: 1px solid #d4d4d4; box-sizing: border-box;}
+.mainArea section div .readMore::after{content: ''; width: 28px; height: 8px; background: url('../images/main/arrow.png') no-repeat center / cover; margin-left: 80px;}
+/* .mainArea section .listBox li{width: 47.75%;} */
 
 /* 상세페이지 */
 .detailPage{padding: 340px 0 70px; position: relative;}

@@ -30,7 +30,7 @@ header div nav ul li.active a{color: white; background-color: black; border-radi
 .btnBox li{position: relative;}
 .btnBox li:not(:last-child):after{content: ''; position: absolute; right: 0; top: 50%; width: 2px; height: 14px; background-color: black; transform: translateY(-50%);}
 .btnBox li button{font-size: 20px; font-weight: 700; color: rgba(0, 0, 0, 0.3); padding-top: 15px; padding-bottom: 15px;}
-.btnBox li.active button{color: black;}
+.btnBox li button.active{color: black;}
 .btnBox li:first-child button{padding-right: 20px;}
 .btnBox li:not(:first-child) button::before{content: '#';}
 .btnBox li:not(:first-child) button{padding-left: 20px; padding-right: 20px;}
