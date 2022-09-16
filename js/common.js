@@ -1,0 +1,42 @@
+$(document).ready(function(){
+    let listBox = $('.listBox');
+    let listBoxWidth = $('.listBox').width();
+    let listCount = Math.ceil(listBoxWidth / 475);
+    listCount > 4 && (listCount = 4);
+    let list = $('.listBox').find('li');
+    let listGap = 20;
+    let listArray = []
+    let listWidth = (listBoxWidth - (listGap * (listCount - 1))) / listCount
+    for(let a = 0; a < listCount; a++){
+        listArray.push(0);
+    }
+
+    list.css('width', listWidth);
+    list.each(function(i){
+        let numb = Math.floor(i % listCount);
+        let numb1 = 0;
+        // if(i < listCount){
+        //     $(this).css({
+        //         left : (listWidth * numb) + (listGap * numb),
+        //         top : 0
+        //     })
+        //     listArray[numb] = $(this).height() + listGap + listArray[numb];
+        // }else{
+        //     numb1 = listArray.indexOf(Math.min(...listArray));
+        //     $(this).css({
+        //         left : (listWidth * numb1) + (listGap * numb1),
+        //         top : Math.min(...listArray)
+        //     })
+        //     listArray[numb1] = $(this).height() + listGap + listArray[numb1];
+        // }
+
+        numb1 = listArray.indexOf(Math.min(...listArray));
+        $(this).css({
+            left : (listWidth * numb1) + (listGap * numb1),
+            top : Math.min(...listArray)
+        })
+        listArray[numb1] = $(this).height() + listGap + listArray[numb1];
+    })
+    listBox.css('height',Math.max(...listArray));
+    
+})
