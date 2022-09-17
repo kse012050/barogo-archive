@@ -12,18 +12,37 @@ $(document).ready(function(){
     })
 
 
-
-    $('.openBtn').click(function(){
-        let fieldsetWidth = $('.searchBox').width();
-        console.log(fieldsetWidth);
+    $('.openBtn').click(function(e){
+        e.stopPropagation();
+        let fieldsetWidth = $('header .CW .searchBox fieldset').width();
         $(this).hide();
-        $('.searchBox').css({
-            'display':'block',
-            'width' : '24px'
-        });
         $('.searchBox').animate({width:fieldsetWidth});
+        $('.searchBox').addClass('active');
     })
-    $('input[type="search"]').on('input',function(){
+    
+    $('body').click(function(){
+        if($('.searchBox').hasClass('active')){
+            $('.searchBox').animate({width:24},function(){
+                $('.openBtn').show();
+            });
+            $('.searchBox').removeClass('active');
+        }
+    })
+    $('.searchBox').click(function(e){
+        e.stopPropagation();
+    })
+
+    $('.closeBtn').click(function(e){
+        e.preventDefault();
+        if($(this).hasClass('active')){
+            $('input[type="search"]').val('');
+            $('.closeBtn').removeClass('active');
+        }
+    })
+
+    
+    $('input[type="search"]').on('input',function(e){
+        e.stopPropagation();
         if($('input[type="search"]').val() != ""){
             $('.closeBtn').addClass('active');
         }else{
@@ -31,19 +50,10 @@ $(document).ready(function(){
         }
     })
 
-    $('.closeBtn').click(function(e){
-        e.preventDefault();
-        if(!$(this).hasClass('active')){
-            $('.searchBox').animate({width:24},function(){
-                $('.openBtn').show();
-                $('.searchBox').removeAttr('style');
-            });
-        }else{
-            $('input[type="search"]').val('');
-            $('.closeBtn').removeClass('active');
-        }
-    })
+  
+    
 
+ 
 
     function listLayout(){
         let listBox = $('.listBox');

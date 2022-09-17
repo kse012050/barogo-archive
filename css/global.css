@@ -17,8 +17,10 @@ header .CW nav ul{display: flex; align-items: center;}
 header .CW nav ul li:not(:last-child){margin-right: 25px;}
 header .CW nav ul li a{font-size: 18px; padding: 9px 15px; font-weight: 700; text-align: center; }
 header .CW nav ul li.active a{color: white; background-color: black; border-radius: 100px;}
-header .CW :is(form ,.searchBox , .openBtn){margin-left: auto;}
-header .CW .searchBox{  display: none; position: relative; overflow: hidden;}
+header .CW .openBtn{position: absolute; right: 50px; top: 50%; transform: translateY(-50%);}
+header .CW :is(form ,.searchBox){margin-left: auto;}
+header .CW .searchBox{ width: 24px; position: relative; overflow: hidden; pointer-events: none;}
+header .CW .searchBox.active{pointer-events: all;}
 header .CW .searchBox fieldset{display: flex; align-items: center; overflow: hidden;}
 header .CW :is(button , [type="submit"]){width: 24px; height: 24px; background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
 header .CW :is(.openBtn ,[type="submit"]){background-image: url('../images/common/search.png');}
@@ -57,6 +59,8 @@ header .CW .searchBox fieldset input[type="search"]::placeholder{font-size: 18px
 .listBox li div{display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 5px;}
 .listBox li div mark{font-size: 15px; font-weight: 700;}
 .listBox li div mark::before{content: '#';}
+.listBox li div + strong{padding-bottom: 20px; position: relative;}
+.listBox li div + strong::after{content: ''; position: absolute; left: 0; bottom: 0; width: 25px; height: 2px; background-color: black;}
 .listBox li strong{display: block; font-size: 22px; line-height: 1.4; font-weight: 700; margin-bottom: 10px;}
 .listBox li p{font-size: 15px; line-height: 1.6; margin-bottom: 5px;}
 .listBox li time{font-size: 15px; line-height: 1.6; color: #666;}
@@ -67,7 +71,7 @@ header .CW .searchBox fieldset input[type="search"]::placeholder{font-size: 18px
 
 /* 푸터 */
 footer .topArea{background-color: black; padding: 50px 0;}
-footer .topArea div{display: flex; justify-content: space-between;}
+footer .topArea div{display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;}
 footer .topArea div .linkArea{display: flex; color: white;}
 footer .topArea div .linkArea > li:not(:last-of-type){margin-right: 130px;}
 footer .topArea div .linkArea > li b{display: block; font-size: 14px; font-weight: 700; margin-bottom: 15px;}

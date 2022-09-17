@@ -5,8 +5,8 @@
 .mainArea > *::-webkit-scrollbar{width: 0;}
 .mainArea .leftArea{width: 43.229%;}
 .mainArea .leftArea > div{line-height: 0;   position: relative;}
-.mainArea .leftArea > div div{font-size: 48px; font-weight: 700; color: white;}
-.mainArea .leftArea > div div{position: absolute; left: 0; top: 0; width: 100%; height: 100%; padding: 60px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; z-index: 1;}
+.mainArea .leftArea > div div{font-size: 2.5vw; font-weight: 700; color: white;}
+.mainArea .leftArea > div div{position: absolute; left: 0; top: 0; width: 100%; height: 100%; padding: 3.125vw; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; z-index: 1;}
 .mainArea .leftArea > div div b{line-height: 1.1875; display: flex; justify-content: space-between;}
 .mainArea .leftArea > div div p{line-height: 1.5;}
 .mainArea .leftArea > div img{width: 100%;}
