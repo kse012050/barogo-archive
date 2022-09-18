@@ -1,3 +1,4 @@
+let responsiveWidth = 769;
 $(document).ready(function(){
     setTimeout(function(){
         listLayout();
@@ -5,6 +6,7 @@ $(document).ready(function(){
     },100)
     $(window).resize(function(){
         listLayout();
+        $('header .CW .searchBox.active').width('calc(100% - 40px)')
     })
 
     $(window).scroll(function(){
@@ -16,13 +18,15 @@ $(document).ready(function(){
         e.stopPropagation();
         let fieldsetWidth = $('header .CW .searchBox fieldset').width();
         $(this).hide();
-        $('.searchBox').animate({width:fieldsetWidth});
+        $(window).width() >= responsiveWidth ? $('.searchBox').animate({width:fieldsetWidth}) : $('.searchBox').animate({width:$(window).width() - 40 + 'px'});
         $('.searchBox').addClass('active');
     })
     
     $('body').click(function(){
         if($('.searchBox').hasClass('active')){
-            $('.searchBox').animate({width:24},function(){
+            let unActiveWidth;
+            $(window).width() >= responsiveWidth ? unActiveWidth = 24 : unActiveWidth = 20;
+            $('.searchBox').animate({width:unActiveWidth},function(){
                 $('.openBtn').show();
             });
             $('.searchBox').removeClass('active');
@@ -96,5 +100,13 @@ $(document).ready(function(){
         })
 
         listLayout();
+    })
+
+    // 푸터 메뉴 클릭
+    $('footer .topArea div .linkArea > li b').click(function(){
+        if($(window).width() < responsiveWidth){
+            $(this).toggleClass('active')
+            $(this).next().stop().slideToggle();
+        }
     })
 })

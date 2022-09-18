@@ -15,8 +15,8 @@
     .mainArea section h2{font-size: 30px; font-weight: 700; padding-top: 80px; border-top: 4px solid black; margin-bottom: 60px;}
 
     /* 상세페이지 */
-    .detailPage{padding: 340px 0 70px; position: relative;}
-    .detailPage > .imgBox{position: absolute; left: 0; top: 0; width: 100%; height: 470px;}
+    .detailPage main{padding: 340px 0 70px; position: relative;}
+    .detailPage main > .imgBox{position: absolute; left: 0; top: 0; width: 100%; height: 470px;}
     .detailPage article{width: 65%; max-width: 1248px; background-color: white; margin: 0 auto; padding: 55px; box-sizing: border-box; position: relative; z-index: 1;}
     .detailPage article .pager{font-size: 12px; display: flex; align-items: center; margin-bottom: 30px;}
     .detailPage article .pager span{font-size: 14px; font-weight: 700; margin-left: 10px; padding-left: 10px; border-left: 1px solid black;}
@@ -24,6 +24,7 @@
     .detailPage article time{display: block; font-size: 13px; color: #666; margin-bottom: 40px;}
     .detailPage article img{width: 100%; margin-bottom: 30px;}
     .detailPage article p{font-size: 15px; line-height: 1.73;}
+    .detailPage article p + img{margin-top: 30px;}
     .detailPage article ul{display: flex; margin-top: 50px; gap: 10px;}
     .detailPage article ul li{font-size: 15px; font-weight: 700; line-height: 1.73;}
     .detailPage article ul li::before{content: '#';}
