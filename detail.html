@@ -7,6 +7,7 @@
     <!-- Iphone 모바일 확대 방지 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0"">
     <title>상세페이지 - 바로고 아카이브</title>
+    <link rel="icon" href="images/common/favicon.png">
     <link rel="stylesheet" href="css/import.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="js/common.js"></script>
@@ -22,7 +23,7 @@
                         <li><a href="barogo.html">Barogo</a></li>
                     </ul>
                 </nav>
-                <a href="">뒤로가기</a>
+                <a href="" class="goBack">뒤로가기</a>
                 <button class="openBtn">검색창 열기</button>
                 <div class="searchBox">
                     <form>
@@ -39,6 +40,10 @@
         <main>
             <div class="imgBox" style="background-image: url('images/detail/top-detail.png');">
                 상단 이미지
+                <!-- 게시판 분류 목록 리스트 , '상단 이미지' 글자보다 아래 있어야 합니다 -->
+                <ul>
+                    <li>NEW</li>
+                </ul>
             </div>
 
             <article>
@@ -60,9 +65,9 @@
                 <p>바로고는 드로닉스의 역량을 적극 활용해 정보보안 및 개인정보보호 관리 체계를 갖춰 회사의 전반적인 정보보안 수준을 끌어올려 고도화되는 보안위협에 효과적인 대응체계를 갖출 방침이다.</p>
                 <p>바로고 관계자는 “초연결 플랫폼으로 도약하기 위한 내실을 다지기 위해 드로닉스와 함께하게 됐다”면서 “두 회사의 강점을 결합해, 더 나은 서비스를 제공할 수 있도록 노력할 것”이라고 말했다.</p>
                 <ul>
-                    <li>바로고</li>
-                    <li>바로고피플</li>
-                    <li>뉴스</li>
+                    <li><a href="">바로고</a></li>
+                    <li><a href="">바로고피플</a></li>
+                    <li><a href="">뉴스</a></li>
                 </ul>
                 <a href="" class="shareBtn">공유하기</a>
                 <section>

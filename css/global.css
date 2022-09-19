@@ -18,7 +18,7 @@
     header .CW nav ul li:not(:last-child){margin-right: 25px;}
     header .CW nav ul li a{font-size: 18px; padding: 9px 15px; font-weight: 700; text-align: center; }
     header .CW nav ul li.active a{color: white; background-color: black; border-radius: 100px;}
-    header .CW > a{display: none;}
+    header .CW a.goBack{display: none;}
     header .CW .openBtn{position: absolute; right: 50px; top: 50%; transform: translateY(-50%);}
     header .CW :is(form ,.searchBox){margin-left: auto;}
     header .CW .searchBox{ width: 24px; position: relative; overflow: hidden; pointer-events: none;}
@@ -35,7 +35,7 @@
 
 
     /* 서브페이지 상단 */
-    .subPage .topBox{display: flex; flex-wrap: wrap; padding: 60px 0 300px; margin-left: 12%; font-weight: 700; background-repeat: no-repeat; background-position: left calc(60px) top; background-size: 480px;}
+    .subPage .topBox{display: flex; flex-wrap: wrap; padding: 60px 0 300px; margin-left: 12%; font-weight: 700; background-repeat: no-repeat; background-position: left 60px top; background-size: 480px;}
     .subPage .topBox h2{font-size: 60px; line-height: 1.2; margin-right: 35.71%;}
     .subPage .topBox p{font-size: 42px; line-height: 1.43;}
     .subPage .articlePage .topBox{background-image: url('../images/article/top-article.png');}

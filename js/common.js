@@ -6,7 +6,7 @@ $(document).ready(function(){
     },100)
     $(window).resize(function(){
         listLayout();
-        $('header .CW .searchBox.active').width('calc(100% - 40px)')
+        $(window).width() < responsiveWidth && $('header .CW .searchBox.active').width('calc(100% - 40px)')
     })
 
     $(window).scroll(function(){
@@ -100,6 +100,11 @@ $(document).ready(function(){
         })
 
         listLayout();
+    })
+
+    $('.goBack').click(function(e){
+        e.preventDefault();
+        history.back();
     })
 
     // 푸터 메뉴 클릭

@@ -17,7 +17,7 @@
     header .CW nav ul li:not(:last-child){margin-right: 12px;}
     header .CW nav ul li a{font-size: 15px; padding: 5px 13px; font-weight: 700; text-align: center; }
     header .CW nav ul li.active a{color: white; background-color: black; border-radius: 100px;}
-    header .CW > a{display: none;}
+    header .CW a.goBack{display: none;}
     header .CW .openBtn{position: absolute; right: 20px; top: 50%; transform: translateY(-50%); z-index: 10;}
     header .CW :is(button , [type="submit"]){width: 20px; height: 20px; background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
     header .CW :is(.openBtn ,[type="submit"]){background-image: url('../images/common/search.png');}
@@ -25,17 +25,17 @@
     header .CW .searchBox{ width: 20px; height: 100%; position: absolute; right: 20px; top: 0; overflow: hidden; display: flex; align-items: center; box-sizing: border-box; pointer-events: none; background-color: white;}
     header .CW .searchBox.active{pointer-events: all;}
     header .CW .searchBox fieldset{display: flex; align-items: center; overflow: hidden;}
-    header .CW .searchBox fieldset [type="submit"]{border: none; background-color: transparent; order: -1;}
+    header .CW .searchBox fieldset [type="submit"]{width: 20px; height: 20px; padding: 0; border: none; background-color: transparent; order: -1;}
     header .CW .searchBox fieldset .closeBtn{background-image: url('../images/common/delete.png'); opacity: 0.3; transition: opacity 0.5s;}
     header .CW .searchBox fieldset .closeBtn.active{opacity: 1;}
-    header .CW .searchBox fieldset input[type="search"]{ flex: 1; font-size: 20px; font-weight: 700; border: none; outline: none; width: 100%; padding: 0 15px; box-sizing: border-box;}
+    header .CW .searchBox fieldset input[type="search"]{ flex: 1; font-size: 20px; font-weight: 700; border: none; outline: none; width: 100%; padding: 0 15px; box-sizing: border-box; background-color: white;}
     header .CW .searchBox fieldset input[type="search"]::placeholder{font-size: 18px; color: rgba(0, 0, 0, 0.3);}
 
     .detailPage header .CW :is(h1 , nav , .openBtn , .searchBox){display: none;}
-    .detailPage .CW > a{display: block; width: 20px; height: 20px; background: url('../images/common/back.png') no-repeat center / cover; text-indent: -9999px;} 
+    .detailPage header .CW a.goBack{display: block; width: 20px; height: 20px; background: url('../images/common/back.png') no-repeat center / cover; text-indent: -9999px;} 
 
     /* 서브페이지 상단 */
-    .subPage .topBox{padding: 40px 0 260px;  font-weight: 700; background-repeat: no-repeat; background-position: left 53px top 110px; background-size: 285px; margin-bottom: 15px;}
+    .subPage .topBox{padding: 40px 0 260px;  font-weight: 700; background-repeat: no-repeat; background-position: right top 110px; background-size: 285px; margin-bottom: 15px;}
     .subPage .topBox h2{font-size: 36px; line-height: 1.2; margin-bottom: 10px;}
     .subPage .topBox p{font-size: 22px; line-height: 1.36;}
     .subPage .articlePage .topBox{background-image: url('../images/article/top-article.png');}
@@ -118,6 +118,8 @@
     /* 상세페이지 */
     .detailPage main{position: relative; padding-bottom: 70px;}
     .detailPage main > .imgBox{padding-bottom: 36.1111%;}
+    .detailPage main > .imgBox ul{position: absolute; left: 0; top: 0; display: flex;}
+    .detailPage main > .imgBox ul li{text-indent: 0; font-size: 15px; color: white; background-color: #fa5014; padding: 16px 7px; }
     .detailPage article{background-color: white; margin: 0 auto; padding: 30px 20px; box-sizing: border-box;}
     .detailPage article .pager{font-size: 12px; display: flex; align-items: center; margin-bottom: 30px;}
     .detailPage article .pager span{font-size: 14px; font-weight: 700; margin-left: 10px; padding-left: 10px; border-left: 1px solid black;}
@@ -133,9 +135,8 @@
     .detailPage article .shareBtn::before{content: ''; width: 20px; height: 20px; background: url('../images/detail/share.png') no-repeat center / cover; margin-right: 10px;}
     .detailPage article section{margin-top: 110px;}
     .detailPage article section h3{font-size: 20px; font-weight: 700; margin-bottom: 20px;}
-    .detailPage article section a{display: flex; flex-direction: column; padding: 20px 0; border-top: 4px solid black; border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
-    .detailPage article section a:first-of-type{}
-    .detailPage article section a .textArea{padding: 17px 0;}
+    .detailPage article section a{display: flex; flex-direction: column; padding: 20px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
+    .detailPage article section a:first-of-type{border-top: 4px solid black; }
     .detailPage article section a .textArea mark{display: block; font-size: 13px; font-weight: 700; margin-bottom: 10px;}
     .detailPage article section a .textArea mark::before{content: '#';}
     .detailPage article section a .textArea strong{display: block; font-size: 17px; font-weight: 700; margin-bottom: 5px;}
