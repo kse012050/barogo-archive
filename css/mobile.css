@@ -118,8 +118,7 @@
     /* 상세페이지 */
     .detailPage main{position: relative; padding-bottom: 70px;}
     .detailPage main > .imgBox{padding-bottom: 36.1111%;}
-    .detailPage main > .imgBox ul{position: absolute; left: 0; top: 0; display: flex;}
-    .detailPage main > .imgBox ul li{text-indent: 0; font-size: 15px; color: white; background-color: #fa5014; padding: 16px 7px; }
+    .detailPage main > .imgBox span{position: absolute; left: 0; top: 0; text-indent: 0; font-size: 15px; color: white; background-color: #fa5014; padding: 16px 7px; }
     .detailPage article{background-color: white; margin: 0 auto; padding: 30px 20px; box-sizing: border-box;}
     .detailPage article .pager{font-size: 12px; display: flex; align-items: center; margin-bottom: 30px;}
     .detailPage article .pager span{font-size: 14px; font-weight: 700; margin-left: 10px; padding-left: 10px; border-left: 1px solid black;}
