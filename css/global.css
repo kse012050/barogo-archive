@@ -141,8 +141,15 @@
 
 
     /* 서브페이지 상단 */
-    .subPage .topBox{display: flex; flex-wrap: wrap; padding: 60px 0 300px; margin-left: 12%; font-weight: 700; background-repeat: no-repeat; background-position: left 60px top; background-size: 480px;}
-    .subPage .topBox h2{font-size: 60px; line-height: 1.2; margin-right: 35.71%;}
+    /* 텍스트의 길이에 따라 min , max width 조정 필요 */
+    @media screen and (min-width : 1101px) {
+        .subPage .topBox{padding: 60px 0 300px 520px; background-position: left top; background-size: 480px;}    
+    }
+    @media screen and (max-width : 1100px) {
+        .subPage .topBox{padding: 60px 0 300px; background-position: right bottom; background-size: 400px;}    
+    }
+    .subPage .topBox{font-weight: 700; background-repeat: no-repeat;}
+    .subPage .topBox h2{font-size: 60px; line-height: 1.2; }
     .subPage .topBox p{font-size: 42px; line-height: 1.43;}
     .subPage .articlePage .topBox{background-image: url('../images/article/top-article.png');}
     .subPage .barogoPage .topBox{background-image: url('../images/barogo/top-barogo.png');}
